@@ -1,7 +1,7 @@
-import { Center, Container,Title, Text, Box, Card, Transition } from "@mantine/core";
+import { Center, Container,Title, Text, Box, Card, Transition, useMantineTheme } from "@mantine/core";
 
 export default function Index() {
-  
+  const theme = useMantineTheme()
   return (
     <Container 
       size="lg"
@@ -17,10 +17,10 @@ export default function Index() {
               </Text>
           </Box>
           <Box mt="md">
-            <Card  shadow="lg" p="lg">
+            <Card shadow="lg" p="lg">
               <Card.Section p="md">
                 <Text size="lg">
-                  Descrição
+                  Desenvolvedor de software experiente em criar interfaces tanto para sistemas robustos quanto para sistemas menores. Capaz de aprender rápido e ser autodidata quando precisa adquirir conhecimento de novas tecnologias. Sempre buscando se manter atualizado e aprender o que tem de melhor no mercado. Ótimo trabalho em equipe e relacionamento interpessoal.
                 </Text>
               </Card.Section>
             </Card>

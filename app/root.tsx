@@ -24,11 +24,39 @@ export default function App() {
         <Links />
       </head>
       <body>
+       
         <MantineProvider 
           withGlobalStyles 
           withNormalizeCSS
           theme={theme} 
+          
         >
+          <Global
+            styles={(theme) => ({
+              "*, *::before, *::after": {
+                boxSizing: "border-box",
+              },
+
+              "@font-face": {
+                fontFamily: 'Open Sans, sans-serif',
+                src: `url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap')`,
+                fontWeight: 700,
+                fontStyle: "normal",
+              },
+              img: {
+                objectFit: "cover"
+              },
+              html: {
+                height: '100%'
+              },
+              body: {
+                height: '100%',
+                ...theme.fn.fontStyles(),
+                color: theme.colors.brand[0],
+                lineHeight: theme.lineHeight
+              },
+            })}
+          />
           <Outlet />
           <ScrollRestoration />
           <Scripts />
